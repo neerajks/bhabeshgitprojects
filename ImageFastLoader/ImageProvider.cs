@@ -20,7 +20,7 @@ namespace ImageFastLoader
         {
             _count = numItems;
             _fetchDelay = fetchDelay;
-            string path = @"C:\Bhabesh\Personal\Pics";
+            string path = @"C:\ShaadiPics\ResizedImages16-04-2016";
             jpgFiles = Directory.GetFiles(path, "*.jpg", SearchOption.TopDirectoryOnly);
             _count = jpgFiles.Length;
         }

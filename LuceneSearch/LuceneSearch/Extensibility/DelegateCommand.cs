@@ -32,7 +32,6 @@ namespace LuceneSearch.Extensibility
             _execute.Invoke(parameter);
         }
 
-
         Func<object, bool> _canExecute;
         Action<object> _execute;
         public DelegateCommand(Func<object, bool> canExecute, Action<object> execute)

@@ -12,13 +12,13 @@
             <Setter Property="VirtualizingStackPanel.VirtualizationMode" Value="Recycling"/>
             <Setter Property="ScrollViewer.IsDeferredScrollingEnabled" Value="True"/>
             <Setter Property="ListView.ItemsSource" Value="{Binding}"/>
-            <!--<Setter Property="ListView.ItemsPanel">
+            <Setter Property="ListView.ItemsPanel">
                 <Setter.Value>
                     <ItemsPanelTemplate>
                         <WrapPanel Orientation="Horizontal"/>
                     </ItemsPanelTemplate>
                 </Setter.Value>
-            </Setter>-->
+            </Setter>
             <Setter Property="ListView.View">
                 <Setter.Value>
                     <!--<GridView>
