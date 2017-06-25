@@ -45,7 +45,7 @@ namespace LuceneSearch.Services.Impl
                 }
 
                 using (var indexDirectory = FSDirectory.Open(context.IndexPath))
-                using (var analyser = new StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30, new HashSet<string> { "_" }))
+                using (var analyser = new StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30))
                 using (var indexWriter = new IndexWriter(indexDirectory, analyser, IndexWriter.MaxFieldLength.UNLIMITED))
                 {
                     var indexSearcher = new IndexSearcher(indexDirectory, true);
@@ -81,7 +81,7 @@ namespace LuceneSearch.Services.Impl
             {
                 using (var indexDirectory = FSDirectory.Open(_searchContext.IndexPath))
                 using (var indexSearcher = new IndexSearcher(indexDirectory, true))
-                using (var analyser = new StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30, new HashSet<string> { "_" }))
+                using (var analyser = new StandardAnalyzer(Lucene.Net.Util.Version.LUCENE_30))
                 {
                     QueryParser queryParser = new QueryParser(Lucene.Net.Util.Version.LUCENE_30, "name", analyser);
                     var query = queryParser.Parse(searchString);
